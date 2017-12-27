@@ -1,0 +1,24 @@
+{
+  "name": "lessdz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anbjakov/lessdz.git"
+  },
+  "author": "bjakov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anbjakov/lessdz/issues"
+  },
+  "homepage": "https://github.com/anbjakov/lessdz#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
