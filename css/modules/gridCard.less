@@ -1,0 +1,38 @@
+.GridCard {
+  display: flex;
+  flex-direction: column;
+  &--direction {
+    @media only screen and (min-width : 320px) and (max-width : 480px) {
+      flex-direction: column;
+    }
+    flex-direction: row;
+  }
+  &-upper {
+    display: flex;
+    flex: 1;
+
+      }
+  &-bottom {
+    display: flex;
+    flex: 1;
+    &--grow {
+      @media only screen and (min-width : 320px) and (max-width : 480px) {
+      flex: 1;
+      }
+      flex: 2;
+    }
+  }
+  &-upper,
+  &-bottom {
+    display: flex;
+    padding: 5px;
+    @media only screen and (min-width : 320px) and (max-width : 480px) {
+      flex-direction: column;
+    }
+    flex-direction: row;
+    &--direction {
+    flex-direction: column;
+  }
+  }
+
+}

@@ -1,116 +1,13 @@
+@import url("variables/variables.less");
+@import url("modules/Card.less");
+@import url("modules/gridCard.less");
+@import url("modules/wrap.less");
+
 .header {
+  background-color: @headerColor;
   height: 40px;
-  background-color: @main-color;
+  margin: 0 auto;
+ }
+.article {
+  padding: 5px;
 }
-.headerGrid,
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  @media only screen and (min-width : 320px) and (max-width : 480px) {
-		flex-direction: column;
-	}
-}
-
-.left {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  
-}
-.right {
-  flex: 2;
-}
-
-.headerGrid,
-.footer,
-.left,
-.right {
-  
-  .flex-set(column);
-  &-block {
-  @media only screen and (min-width : 320px) and (max-width : 480px) {
-		.flex-set(column-reverse);
-    }
-  flex:1;
-  padding: 15px 15px 15px;
-  .flex-set(row);
-  background-color: @main-color;
-  margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 0;
-  &-img {
-    .flex-set(row);
-    .size-set(@width*1%,@height*3px);
-    background: @img-color;
-  }
-  &-text {
-    .size-set(@width*1%,100px);
-    height: @height*3px;
-    min-height: @height*1px;
-    background-color: @text-color;
-  }
-  }
-}
-
-.footer {
-  .left,
-  .right{
-    &-block:hover {
-      background-color: darken(@main-color,15%);
-    }
-    &-block-img{
-     .size-set(@width*1%,@height*3px);
-  }
-    .right {
-      &-block {
-        .flex-set(row);
-      }
-    }
-    .left {
-      &-block {
-        @media only screen and (min-width : 320px) and (max-width : 480px) {
-		flex-direction: row-reverse;
-	}
-      }
-    }
-}
-}
-
-.right-block {
-  flex-direction: row-reverse;
-  @media only screen and (min-width : 320px) and (max-width : 480px) {
-		.flex-set(column-reverse);
-    }
-}
-.headerGrid {
-  .right,
-  .left {
-    @media only screen and (min-width : 320px) and (max-width : 480px) {
-		.flex-set(column);
-	}
-    .flex-set(row);
-    flex: 1;
-    &-block-img{
-    height: @height*1px;
-  }
-  }
-}
-
-//mixin
-.flex-set(@flexDir){
-  display: flex;
-  flex-direction: @flexDir;
-}
-.size-set(@width,@height) {
-  width: @width;
-  height:@height;
-}
-
-
-
-@background: #F2E97E; 
-@main-color: #3E606F;
-@img-color: #CBDBD7;
-@text-color: #91AAB4;
-@width: 100;
-@height: 100;
